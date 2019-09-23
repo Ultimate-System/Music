@@ -1,0 +1,100 @@
+ion-header {
+    .overlay_blur {
+        width: 100vw;
+        height: 56px;
+        opacity: 0.3;
+        filter: blur(7px);
+        position: absolute;
+        background-color: black;
+    }
+    ion-toolbar {
+        position: absolute;
+        --background: transparent;
+        padding: 0 calc(1rem - 5px);
+        ion-icon {
+            color: white;
+            font-size: 1.7rem;
+        }
+        ion-title {
+            color: white;
+        }
+    }
+}
+ion-content {
+    .img_song {
+        width: 100vw;
+        height: 70vh;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        .song_content_overlay {
+            left: 0;
+            bottom: 0;
+            opacity: 0.3;
+            width: 100vw;
+            height: 100px;
+            filter: blur(7px);
+            position: absolute;
+            background-color: black;
+        }
+        .song_content {
+            bottom: 0;
+            width: 100vw;
+            height: 100px;
+            padding: 0 1rem;
+            position: absolute;
+            align-items: center;
+            display: inline-flex;
+            .song {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                .song_info {
+                    z-index: 1;
+                    color: white;
+                    span {
+                        display: block;
+                        &:last-child {
+                            font-size: 13px;
+                            padding-top: 0.5rem;
+                        }
+                        &:first-child {
+                            font-weight: bold;
+                        }
+                    }
+                }
+                ion-icon {
+                    color: white;
+                    font-size: 1.7rem;
+                }
+            }
+        }
+    }
+    .items {
+        width: calc(100vw - 0.4px);
+        height: calc(30vh - 0.4px);
+        //#dddddd
+        .item {
+            width: 50%;
+            height: 50%;
+            align-items: center;
+            display: inline-flex;
+            justify-content: center;
+            border: 0.1px solid #f1f1f1;
+            ion-icon{
+                font-size: 1.7rem;
+            }
+            .item_content {
+                span {
+                    display: block;
+                    margin-left: 1rem;
+                    &:last-child {
+                        font-size: 13px;
+                        color: #858585;
+                        padding-top: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
