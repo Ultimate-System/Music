@@ -9,13 +9,15 @@ import { Platform } from '@ionic/angular';
 })
 export class MusicPage implements OnInit {
 
-  filesSong:any [] =[];
+  public filesSong:FileEntry [] = [];
 
   constructor(private platform: Platform, private file: File) { }
 
   ngOnInit() {
     this.platform.ready().then(() => {
-      this.getFilesSong('');
+      if (this.platform.is('android')){
+        this.getFilesSong('');
+      }
     });
   }
 
@@ -34,6 +36,14 @@ export class MusicPage implements OnInit {
       });
     }).then(() => {
       console.log(this.filesSong);
-    });
+    }); 
+  }
+
+  playSong() {
+    console.log("Play Song");
+  }
+
+  getOptions() {
+    console.log("options");
   }
 }

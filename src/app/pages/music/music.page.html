@@ -8,5 +8,12 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item *ngFor="let song of filesSong">
+      <ion-label (click)="playSong()">{{ song.name }}</ion-label>
+      <ion-buttons (click)="getOptions()">
+        <ion-icon name="md-more"></ion-icon>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
 </ion-content>
